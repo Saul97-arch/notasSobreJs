@@ -47,6 +47,17 @@ function countdown(n) {
   }
 }
 
+/* Retorna um range de números: */
+
+function rangeOfNumbers(startNum, endNum) {
+  if(startNum === endNum){ //if (endNum - startNum === 0)
+    return [startNum];
+  }else{
+    var range = rangeOfNumbers(startNum , endNum -1);
+    range.push(endNum);
+    return range;
+  }
+};
 
 /* Alguns links, lembrar que sempre jogar learn recursion, ou what is recursion no google duckgo etc sempre vai retornar algo bom
 https://medium.com/@daniel.oliver.king/getting-started-with-recursion-f89f57c5b60e
